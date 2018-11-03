@@ -13,4 +13,11 @@ class Alert {
         
         STTabBarController.shared.present(alert, animated: true, completion: completion)
     }
+    
+    class func showSelectMusicFirst() {
+        let alert = UIAlertController(title: "ops", message: "You need to select a music first", preferredStyle: .alert)
+        alert.addAction(.init(title: "Ok", style: .default))
+        
+        STTabBarController.shared.present(alert, animated: true, completion: nil)
+    }
 }

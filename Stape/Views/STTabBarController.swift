@@ -12,6 +12,8 @@ class STTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     static let shared = STTabBarController()
     
+    let playerMockViewController = UIViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,10 +56,11 @@ class STTabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.isHidden = false
         
         let homeNavigationController = createNavigationController(HomeViewController(), icon: "home")
+        let playerViewController = createNavigationController(playerMockViewController, icon: "play")
         let searchNavigationController = createNavigationController(SearchViewController(), icon: "search")
         let profileNavigationController = createNavigationController(ProfileViewController(), icon: "profile")
         
-        setViewControllers([homeNavigationController, profileNavigationController, searchNavigationController], animated: false)
+        setViewControllers([homeNavigationController, playerViewController, profileNavigationController, searchNavigationController], animated: false)
     }
     
     private func createNavigationController(_ viewController: UIViewController, icon: String)
@@ -72,5 +75,20 @@ class STTabBarController: UITabBarController, UITabBarControllerDelegate {
         let navigationController = UINavigationController(rootViewController: viewController)
         
         return navigationController
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if let navigation = viewController as? UINavigationController,
+            let topViewController = navigation.topViewController, topViewController == playerMockViewController  {
+            
+            let playerViewController = PlayerViewController()
+            
+            currentNavigation()?.present(playerViewController, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        
+        return true
     }
 }

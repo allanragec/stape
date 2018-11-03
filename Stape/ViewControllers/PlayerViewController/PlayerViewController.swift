@@ -27,8 +27,12 @@ class PlayerViewController: UIViewController {
     
     var playerManager = PlayerManager.shared
     
-    var currentMusic: Music
-    let musics: [Music]
+    var currentMusic: Music?
+    var musics: [Music]?
+    
+    init() {
+        super.init(nibName: "PlayerViewController", bundle: nil)
+    }
     
     init(music: Music, musics: [Music]) {
         self.currentMusic = music

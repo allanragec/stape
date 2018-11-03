@@ -17,17 +17,33 @@ class PlayerViewModel {
     func viewDidLoad() {
         guard let viewController = viewController else { return }
         
-        setupMusic(music: viewController.currentMusic)
-        viewController.playerManager.viewModel = self
-        viewController.playerManager.setMusics(music: viewController.currentMusic, musics: viewController.musics)
-        viewController.playerManager.playSound(music: viewController.currentMusic)
-        
         self.viewController?.equalizerIndicator.type = .audioEqualizer
+        
+        let playerManager = viewController.playerManager
+        
+        viewController.playerManager.viewModel = self
+        if let currentMusic = viewController.currentMusic, let musics = viewController.musics {
+            setupMusic(music: currentMusic)
+            viewController.playerManager.setMusics(music: currentMusic, musics: musics)
+            viewController.playerManager.playSound(music: currentMusic)
+        }
+        else if let currentMusic = playerManager.currentMusic {
+            viewController.currentMusic = currentMusic
+            
+            setupMusic(music: currentMusic)
+        }
+        else {
+            Alert.showSelectMusicFirst()
+        }
+        
     }
     
     func setupMusic(music: Music) {
         guard let viewController = viewController else { return }
         
+        let isPlaying = viewController.playerManager.isPlaying()
+        showPlayButton(!isPlaying)
+        showEqualizer(isPlaying)
         viewController.artistNameLabel.text = music.artist.name
         
         let url = URL(string: music.album.coverBig)

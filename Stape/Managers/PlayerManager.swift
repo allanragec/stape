@@ -78,6 +78,10 @@ class PlayerManager {
     func playSound(music: Music? = nil) {
         disposable?.dispose()
         
+        if music != nil {
+            player = nil
+        }
+        
         guard let music = music ?? currentMusic else { return }
         
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
