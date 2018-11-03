@@ -20,4 +20,8 @@ struct Album: Codable {
     let recordType: String
     let tracklist: String
     let explicitLyrics: Bool
+    
+    func toShortAlbum() -> ShortAlbum {
+        return ShortAlbum(id: id, title: title, coverMedium: coverMedium, coverBig: coverBig)
+    }
 }

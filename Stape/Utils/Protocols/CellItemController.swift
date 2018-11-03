@@ -8,6 +8,6 @@
 
 protocol CellItemController {
     static func getIdentifier() -> String
-    func cell(tableView: UITableView) -> UITableViewCell
+    func cell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
     func openCell()
 }

@@ -13,7 +13,7 @@ class ArtistHomeCellItem: CellItemController {
         self.artist = artist
     }
     
-    func cell(tableView: UITableView) -> UITableViewCell {
+    func cell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let identifier = type(of: self).getIdentifier()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? ArtistTableViewCell

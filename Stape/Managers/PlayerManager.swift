@@ -70,7 +70,7 @@ class PlayerManager {
             return music.id == currentMusic?.id
         }
         
-        guard let newIndex = index, newIndex < (musics?.count ?? 0)  else { return nil }
+        guard let newIndex = index, (newIndex + 1) < (musics?.count ?? 0)  else { return nil }
         
         return musics?[newIndex + 1]
     }

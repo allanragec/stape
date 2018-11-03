@@ -34,7 +34,7 @@ extension ModularViewModel {
         
         let item = items[index.row]
         
-        return item.cell(tableView: tableView)
+        return item.cell(tableView: tableView, indexPath: index)
     }
 }
 

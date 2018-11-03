@@ -8,8 +8,15 @@
 
 import UIKit
 
-class AlbumDetailsViewController: UIViewController {
-
+class AlbumDetailsViewController: ModularViewController<AlbumDetailsViewModel> {
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    lazy var viewModel: AlbumDetailsViewModel = {
+        return AlbumDetailsViewModel(self)
+    }()
+    
     let album: Album
     
     init(album: Album) {
@@ -23,7 +30,16 @@ class AlbumDetailsViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         navigationItem.title = album.title
     }
-
+    
+    override func getTableView() -> UITableView {
+        return tableView
+    }
+    
+    override func getViewModel() -> AlbumDetailsViewModel {
+        return viewModel
+    }
 }
