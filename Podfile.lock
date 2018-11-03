@@ -14,7 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - "NSObject+Rx (= 4.4.1)"
-  - NVActivityIndicatorView
+  - NVActivityIndicatorView (= 4.4.0)
   - RxBlocking (= 4.3.1)
   - RxSwift (= 4.3.1)
   - SDWebImage (= 4.4.2)
@@ -37,6 +37,6 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   UIImageColors: c83669aff7ceb55a3b3f2c398f3b5c14632a267b
 
-PODFILE CHECKSUM: a68464d6bcc946666324b6b8e613a3efdee88bf1
+PODFILE CHECKSUM: 450e7478275a1afac318cc988a9656d6de00bce0
 
 COCOAPODS: 1.5.3

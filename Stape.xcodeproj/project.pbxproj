@@ -86,6 +86,8 @@
 		D2B5B98F21894EED00B81E1F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B5B98E21894EED00B81E1F /* UIKit.framework */; };
 		D2B5B99121894EF800B81E1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B5B99021894EF700B81E1F /* CoreGraphics.framework */; };
 		D2B5B99321894EFD00B81E1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B5B99221894EFD00B81E1F /* QuartzCore.framework */; };
+		D2FDA02E218E260B00769C8B /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA02D218E260B00769C8B /* PlayerManager.swift */; };
+		D2FDA030218E379100769C8B /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA02F218E379100769C8B /* PlayerViewModel.swift */; };
 		EEAAE689626E8312A67CBCE3 /* Pods_StapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B348E3CC8EC1902FB3BB520A /* Pods_StapeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +220,8 @@
 		D2B5B98E21894EED00B81E1F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2B5B99021894EF700B81E1F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D2B5B99221894EFD00B81E1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2FDA02D218E260B00769C8B /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		D2FDA02F218E379100769C8B /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		DDEC4F21D8E6FF69BBBFA9A6 /* Pods-StapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StapeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StapeTests/Pods-StapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B1AA64B7D00D6100194E9B /* Pods-Stape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stape.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stape/Pods-Stape.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,6 +310,7 @@
 			children = (
 				D21008DF218CF59000D7EF03 /* PlayerViewController.swift */,
 				D21008E0218CF59000D7EF03 /* PlayerViewController.xib */,
+				D2FDA02F218E379100769C8B /* PlayerViewModel.swift */,
 			);
 			path = PlayerViewController;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				D23E7B4521896BE100A250D1 /* SessionManager.swift */,
+				D2FDA02D218E260B00769C8B /* PlayerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -814,11 +820,13 @@
 				D23E7B5F21898E9900A250D1 /* Artist.swift in Sources */,
 				D23E7B4B2189866800A250D1 /* Album.swift in Sources */,
 				D21008C8218C957200D7EF03 /* ModularViewModel.swift in Sources */,
+				D2FDA02E218E260B00769C8B /* PlayerManager.swift in Sources */,
 				D23E7B4D2189867B00A250D1 /* ServerErrors.swift in Sources */,
 				D2AD0BAB218AD66000145551 /* CellItemController.swift in Sources */,
 				D23E7B5D21898E8600A250D1 /* ArtistsCollection.swift in Sources */,
 				D21008D0218CDB4C00D7EF03 /* MusicsViewController.swift in Sources */,
 				D23E7B3C2189568500A250D1 /* LoginViewModel.swift in Sources */,
+				D2FDA030218E379100769C8B /* PlayerViewModel.swift in Sources */,
 				D21008CC218CD2D700D7EF03 /* AritstDetailsDiscographyCellItem.swift in Sources */,
 				D23E7B482189823A00A250D1 /* GetAlbumsInteractor.swift in Sources */,
 				D21008B8218AE1C500D7EF03 /* GetTopMusicsInteractor.swift in Sources */,
