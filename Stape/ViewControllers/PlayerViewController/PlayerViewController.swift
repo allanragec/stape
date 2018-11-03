@@ -6,8 +6,6 @@
 //  Copyright © 2018 Allan Melo. All rights reserved.
 //
 
-import AVFoundation
-import RxSwift
 import NVActivityIndicatorView
 
 class PlayerViewController: UIViewController {
