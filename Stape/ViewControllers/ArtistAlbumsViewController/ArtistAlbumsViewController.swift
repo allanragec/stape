@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ArtistAlbumsViewController: UIViewController {
+
+class ArtistAlbumsViewController: ModularViewController<ArtistAlbumsViewModel> {
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    lazy var viewModel: ArtistAlbumsViewModel = {
+        return ArtistAlbumsViewModel(self)
+    }()
     
     let artist: Artist
     
@@ -20,5 +28,19 @@ class ArtistAlbumsViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = artist.name
+    }
+    
+    override func getTableView() -> UITableView {
+        return tableView
+    }
+    
+    override func getViewModel() -> ArtistAlbumsViewModel {
+        return viewModel
     }
 }
