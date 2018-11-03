@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicsViewController" customModule="Stape" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="5sy-S7-rD1" id="N0J-ll-Spy"/>
+                <outlet property="tableView" destination="jn0-Tb-Ak9" id="Gtz-jr-y3Z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-Tb-Ak9">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5sy-S7-rD1">
+                    <rect key="frame" x="177.5" y="355.5" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5sy-S7-rD1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="2FU-4L-Hc1"/>
+                <constraint firstItem="jn0-Tb-Ak9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MSo-TN-1a0"/>
+                <constraint firstItem="5sy-S7-rD1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SNo-Q9-Ila"/>
+                <constraint firstItem="jn0-Tb-Ak9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c4H-ns-FLn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jn0-Tb-Ak9" secondAttribute="trailing" id="dBE-5g-zUf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jn0-Tb-Ak9" secondAttribute="bottom" id="oy7-IG-2t0"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

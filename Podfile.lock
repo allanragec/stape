@@ -1,0 +1,42 @@
+PODS:
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
+  - RxBlocking (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - UIImageColors (2.0.1)
+
+DEPENDENCIES:
+  - "NSObject+Rx (= 4.4.1)"
+  - NVActivityIndicatorView
+  - RxBlocking (= 4.3.1)
+  - RxSwift (= 4.3.1)
+  - SDWebImage (= 4.4.2)
+  - UIImageColors (= 2.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - "NSObject+Rx"
+    - NVActivityIndicatorView
+    - RxBlocking
+    - RxSwift
+    - SDWebImage
+    - UIImageColors
+
+SPEC CHECKSUMS:
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
+  RxBlocking: 64c051285261ca2339481e91b5f70eb06b03660a
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UIImageColors: c83669aff7ceb55a3b3f2c398f3b5c14632a267b
+
+PODFILE CHECKSUM: a68464d6bcc946666324b6b8e613a3efdee88bf1
+
+COCOAPODS: 1.5.3
