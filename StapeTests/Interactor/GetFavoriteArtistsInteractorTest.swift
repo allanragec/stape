@@ -22,7 +22,7 @@ class GetFavoriteArtistsInteractorTest: XCTestCase {
         
         let artists = try? interactor.execute().asObservable().toBlocking().single()
         XCTAssertNotNil(artists)
-        XCTAssertEqual(artists?.count, 3)
+        XCTAssertFalse(artists?.isEmpty ?? false)
     }
     
     func testGetAlbumsInteractorWithAlbums() {

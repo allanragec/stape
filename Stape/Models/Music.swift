@@ -11,7 +11,7 @@ struct Music: Codable {
     let title: String
     let preview: String
     let artist: ShortArtist
-    let album: ShortAlbum
+    let album: ShortAlbum?
 }
 
 struct ShortArtist: Codable {

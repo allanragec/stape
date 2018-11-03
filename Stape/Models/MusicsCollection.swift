@@ -6,6 +6,6 @@
 //  Copyright © 2018 Allan Melo. All rights reserved.
 //
 
-struct TopMusicsCollection: Codable {
+struct MusicsCollection: Codable {
     let data: [Music]
 }

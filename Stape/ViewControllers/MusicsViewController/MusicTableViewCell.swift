@@ -18,10 +18,10 @@ class MusicTableViewCell: UITableViewCell {
         coverImageView.sd_cancelCurrentImageLoad()
     }
     func configure(music: Music) {
-        let imageUrl = URL(string: music.album.coverMedium)
+        let imageUrl = URL(string: music.album?.coverMedium ?? "")
         coverImageView.sd_setImage(with: imageUrl, completed: nil)
         
         titleLabel.text = music.title
-        subtitleLabel.text = "\(music.artist.name) - \(music.album.title)"
+        subtitleLabel.text = "\(music.artist.name) - \(music.album?.title ?? "")"
     }
 }

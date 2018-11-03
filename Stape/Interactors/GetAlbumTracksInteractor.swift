@@ -1,19 +1,18 @@
 //
-//  GetTopMusicsInteractor.swift
+//  GetAlbumTracksInteractor.swift
 //  Stape
 //
-//  Created by Allan Melo on 01/11/18.
+//  Created by Allan Melo on 03/11/18.
 //  Copyright © 2018 Allan Melo. All rights reserved.
 //
 
 import RxSwift
 
-class GetTopMusicsInteractor {
-    
+class GetAlbumTracksInteractor {
     let url: String
     
-    init(artistId: Int64, limit: Int = 3) {
-        self.url = "https://api.deezer.com/artist/\(artistId)/top?limit=\(limit)"
+    init(albumId: Int64) {
+        self.url = "https://api.deezer.com/album/\(albumId)/tracks"
     }
     
     func execute() -> Observable<[Music]> {
@@ -21,7 +20,7 @@ class GetTopMusicsInteractor {
     }
 }
 
-extension GetTopMusicsInteractor: LoaderObservable {
+extension GetAlbumTracksInteractor: LoaderObservable {
     typealias T = MusicsCollection
     
     func getUrl() -> String {

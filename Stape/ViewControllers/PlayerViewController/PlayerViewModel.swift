@@ -46,7 +46,7 @@ class PlayerViewModel {
         showEqualizer(isPlaying)
         viewController.artistNameLabel.text = music.artist.name
         
-        let url = URL(string: music.album.coverBig)
+        let url = URL(string: music.album?.coverBig ?? "")
         
         viewController.coverAlbumImageView.sd_setImage(with: url) { image, _, _, _ in
             UIView.animate(withDuration: 0.6, animations: {
@@ -56,7 +56,7 @@ class PlayerViewModel {
         }
         
         viewController.musicNameLabel.text = music.title
-        viewController.albumNameLabel.text = music.album.title
+        viewController.albumNameLabel.text = music.album?.title
     }
     
     func showActivityIndicator(_ show: Bool) {

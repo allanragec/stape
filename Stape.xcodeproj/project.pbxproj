@@ -10,7 +10,7 @@
 		45B4C4C2A9E1F68853AE2790 /* Pods_Stape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9C47BDDA4170E204EDAA44 /* Pods_Stape.framework */; };
 		D21008B8218AE1C500D7EF03 /* GetTopMusicsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008B7218AE1C500D7EF03 /* GetTopMusicsInteractor.swift */; };
 		D21008BA218AE65D00D7EF03 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008B9218AE65D00D7EF03 /* Music.swift */; };
-		D21008BC218AE68E00D7EF03 /* TopMusicsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008BB218AE68E00D7EF03 /* TopMusicsCollection.swift */; };
+		D21008BC218AE68E00D7EF03 /* MusicsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008BB218AE68E00D7EF03 /* MusicsCollection.swift */; };
 		D21008BF218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008BD218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.swift */; };
 		D21008C0218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D21008BE218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.xib */; };
 		D21008C4218C8E7F00D7EF03 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21008C3218C8E7F00D7EF03 /* UITableView.swift */; };
@@ -88,6 +88,9 @@
 		D2B5B99321894EFD00B81E1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B5B99221894EFD00B81E1F /* QuartzCore.framework */; };
 		D2FDA02E218E260B00769C8B /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA02D218E260B00769C8B /* PlayerManager.swift */; };
 		D2FDA030218E379100769C8B /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA02F218E379100769C8B /* PlayerViewModel.swift */; };
+		D2FDA032218E429900769C8B /* GetAlbumTracksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA031218E429900769C8B /* GetAlbumTracksInteractor.swift */; };
+		D2FDA035218E438300769C8B /* GetAlbumTracksInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA034218E438300769C8B /* GetAlbumTracksInteractorTest.swift */; };
+		D2FDA037218E43E700769C8B /* GetTopMusicsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA036218E43E600769C8B /* GetTopMusicsInteractorTest.swift */; };
 		EEAAE689626E8312A67CBCE3 /* Pods_StapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B348E3CC8EC1902FB3BB520A /* Pods_StapeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +111,7 @@
 		BD9C47BDDA4170E204EDAA44 /* Pods_Stape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21008B7218AE1C500D7EF03 /* GetTopMusicsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopMusicsInteractor.swift; sourceTree = "<group>"; };
 		D21008B9218AE65D00D7EF03 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		D21008BB218AE68E00D7EF03 /* TopMusicsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMusicsCollection.swift; sourceTree = "<group>"; };
+		D21008BB218AE68E00D7EF03 /* MusicsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsCollection.swift; sourceTree = "<group>"; };
 		D21008BD218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailsTopMusicsTableViewCell.swift; sourceTree = "<group>"; };
 		D21008BE218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailsTopMusicsTableViewCell.xib; sourceTree = "<group>"; };
 		D21008C3218C8E7F00D7EF03 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
@@ -222,6 +225,9 @@
 		D2B5B99221894EFD00B81E1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2FDA02D218E260B00769C8B /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		D2FDA02F218E379100769C8B /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		D2FDA031218E429900769C8B /* GetAlbumTracksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumTracksInteractor.swift; sourceTree = "<group>"; };
+		D2FDA034218E438300769C8B /* GetAlbumTracksInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumTracksInteractorTest.swift; sourceTree = "<group>"; };
+		D2FDA036218E43E600769C8B /* GetTopMusicsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopMusicsInteractorTest.swift; sourceTree = "<group>"; };
 		DDEC4F21D8E6FF69BBBFA9A6 /* Pods-StapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StapeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StapeTests/Pods-StapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B1AA64B7D00D6100194E9B /* Pods-Stape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stape.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stape/Pods-Stape.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -380,7 +386,7 @@
 				D23E7B5C21898E8600A250D1 /* ArtistsCollection.swift */,
 				D23E7B5E21898E9900A250D1 /* Artist.swift */,
 				D21008B9218AE65D00D7EF03 /* Music.swift */,
-				D21008BB218AE68E00D7EF03 /* TopMusicsCollection.swift */,
+				D21008BB218AE68E00D7EF03 /* MusicsCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +405,8 @@
 			children = (
 				D23E7B5421898A2A00A250D1 /* GetAlbumsInteractorTest.swift */,
 				D23E7B6021898F9700A250D1 /* GetFavoriteArtistsInteractorTest.swift */,
+				D2FDA034218E438300769C8B /* GetAlbumTracksInteractorTest.swift */,
+				D2FDA036218E43E600769C8B /* GetTopMusicsInteractorTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -524,6 +532,7 @@
 				D23E7B5821898C5E00A250D1 /* GetFavoriteArtistsInteractor.swift */,
 				D21008B7218AE1C500D7EF03 /* GetTopMusicsInteractor.swift */,
 				D21008E8218CFA5A00D7EF03 /* GetMusicDataInteractor.swift */,
+				D2FDA031218E429900769C8B /* GetAlbumTracksInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -819,6 +828,7 @@
 				D21008C6218C903700D7EF03 /* ArtistHomeCellItem.swift in Sources */,
 				D23E7B5F21898E9900A250D1 /* Artist.swift in Sources */,
 				D23E7B4B2189866800A250D1 /* Album.swift in Sources */,
+				D2FDA032218E429900769C8B /* GetAlbumTracksInteractor.swift in Sources */,
 				D21008C8218C957200D7EF03 /* ModularViewModel.swift in Sources */,
 				D2FDA02E218E260B00769C8B /* PlayerManager.swift in Sources */,
 				D23E7B4D2189867B00A250D1 /* ServerErrors.swift in Sources */,
@@ -830,7 +840,7 @@
 				D21008CC218CD2D700D7EF03 /* AritstDetailsDiscographyCellItem.swift in Sources */,
 				D23E7B482189823A00A250D1 /* GetAlbumsInteractor.swift in Sources */,
 				D21008B8218AE1C500D7EF03 /* GetTopMusicsInteractor.swift in Sources */,
-				D21008BC218AE68E00D7EF03 /* TopMusicsCollection.swift in Sources */,
+				D21008BC218AE68E00D7EF03 /* MusicsCollection.swift in Sources */,
 				D21008C4218C8E7F00D7EF03 /* UITableView.swift in Sources */,
 				D21008BF218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.swift in Sources */,
 				D23E7B74218AAD4600A250D1 /* AlbumCollectionViewCell.swift in Sources */,
@@ -844,7 +854,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FDA035218E438300769C8B /* GetAlbumTracksInteractorTest.swift in Sources */,
 				D23E7B6121898F9700A250D1 /* GetFavoriteArtistsInteractorTest.swift in Sources */,
+				D2FDA037218E43E700769C8B /* GetTopMusicsInteractorTest.swift in Sources */,
 				D23E7B5521898A2A00A250D1 /* GetAlbumsInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
