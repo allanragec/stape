@@ -39,6 +39,9 @@ class AlbumDetailsViewModel {
     
     func refresh() {
         viewController?.refreshControl.endRefreshing()
+        disposable?.dispose()
+        
+        getTracks()
     }
     
     //MARK: Private methods
