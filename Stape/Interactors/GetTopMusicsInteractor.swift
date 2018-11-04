@@ -21,7 +21,7 @@ class GetTopMusicsInteractor {
     }
 }
 
-extension GetTopMusicsInteractor: LoaderObservable {
+extension GetTopMusicsInteractor: LoaderCodableObservable {
     typealias T = MusicsCollection
     
     func getUrl() -> String {

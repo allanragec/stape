@@ -102,6 +102,7 @@
 		D2FDA04B218E55C000769C8B /* ArtistAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FDA049218E55C000769C8B /* ArtistAlbumTableViewCell.xib */; };
 		D2FDA04D218E57DE00769C8B /* ArtistAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA04C218E57DE00769C8B /* ArtistAlbumsViewModel.swift */; };
 		D2FDA04F218E58C000769C8B /* ArtistAlbumCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA04E218E58C000769C8B /* ArtistAlbumCellItem.swift */; };
+		D2FDA053218F32D000769C8B /* LoaderDataFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA052218F32D000769C8B /* LoaderDataFromServer.swift */; };
 		EEAAE689626E8312A67CBCE3 /* Pods_StapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B348E3CC8EC1902FB3BB520A /* Pods_StapeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -250,6 +251,7 @@
 		D2FDA049218E55C000769C8B /* ArtistAlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistAlbumTableViewCell.xib; sourceTree = "<group>"; };
 		D2FDA04C218E57DE00769C8B /* ArtistAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsViewModel.swift; sourceTree = "<group>"; };
 		D2FDA04E218E58C000769C8B /* ArtistAlbumCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumCellItem.swift; sourceTree = "<group>"; };
+		D2FDA052218F32D000769C8B /* LoaderDataFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDataFromServer.swift; sourceTree = "<group>"; };
 		DDEC4F21D8E6FF69BBBFA9A6 /* Pods-StapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StapeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StapeTests/Pods-StapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B1AA64B7D00D6100194E9B /* Pods-Stape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stape.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stape/Pods-Stape.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -571,6 +573,7 @@
 				D23E7B4C2189867B00A250D1 /* ServerErrors.swift */,
 				D23E7B622189FE1D00A250D1 /* LoaderObservable.swift */,
 				D21008C9218CA08A00D7EF03 /* Alert.swift */,
+				D2FDA052218F32D000769C8B /* LoaderDataFromServer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				D2206233218AC44300A5BC34 /* ArtistDetailsViewModel.swift in Sources */,
 				D2FDA04D218E57DE00769C8B /* ArtistAlbumsViewModel.swift in Sources */,
 				D2FDA03F218E476700769C8B /* AlbumDetailHeaderTableViewCell.swift in Sources */,
+				D2FDA053218F32D000769C8B /* LoaderDataFromServer.swift in Sources */,
 				D23E7B632189FE1D00A250D1 /* LoaderObservable.swift in Sources */,
 				D2B5B92A2188DB8100B81E1F /* AppDelegate.swift in Sources */,
 				D21008E1218CF59000D7EF03 /* PlayerViewController.swift in Sources */,

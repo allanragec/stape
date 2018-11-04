@@ -20,7 +20,7 @@ class GetAlbumTracksInteractor {
     }
 }
 
-extension GetAlbumTracksInteractor: LoaderObservable {
+extension GetAlbumTracksInteractor: LoaderCodableObservable {
     typealias T = MusicsCollection
     
     func getUrl() -> String {

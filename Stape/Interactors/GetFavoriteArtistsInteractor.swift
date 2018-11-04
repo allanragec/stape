@@ -59,7 +59,7 @@ class GetFavoriteArtistsInteractor  {
     }
 }
 
-extension GetFavoriteArtistsInteractor: LoaderObservable {
+extension GetFavoriteArtistsInteractor: LoaderCodableObservable {
     typealias T = ArtistsCollection
     
     func getUrl() -> String {

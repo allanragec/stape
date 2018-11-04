@@ -8,48 +8,31 @@
 
 import RxSwift
 
-protocol LoaderObservable  {
+protocol LoaderCodableObservable  {
     associatedtype T : Codable
     
     func getUrl() -> String
     func createObservable() -> Observable<T>
 }
 
-extension LoaderObservable {
-    
+extension LoaderCodableObservable {
     func createObservable() -> Observable<T> {
-        return Observable.create{ observer in
-            guard let url = URL(string: self.getUrl()) else {
-                observer.onError(ServerErrors.invalidRequest)
-                
-                return Disposables.create {}
-            }
-            
-            let configuration = URLSession.shared.configuration
-            configuration.timeoutIntervalForRequest = 10
-            
-            let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-                guard let data = data, error == nil else {
-                    observer.onError(error ?? ServerErrors.connectionError)
-                    
-                    return
-                }
-                
-                do {
-                    let type = try T(with: data)
-                    observer.onNext(type)
-                    observer.onCompleted()
-                }
-                catch let error {
-                    observer.onError(error)
-                }
-            })
-            
-            task.resume()
-            
-            return Disposables.create {
-                task.suspend()
-            }
-        }
+        return LoaderDataFromServer()
+            .createObservable(url: getUrl())
+            .map { try T(with: $0) }
     }
 }
+
+protocol LoaderDataObservable  {
+    func getUrl() -> String
+    func createDataObservable() -> Observable<Data>
+}
+
+extension LoaderDataObservable {
+    func createDataObservable() -> Observable<Data> {
+        return LoaderDataFromServer()
+            .createObservable(url: getUrl())
+    }
+}
+
+

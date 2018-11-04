@@ -16,35 +16,12 @@ class GetMusicDataInteractor {
     }
     
     func execute() -> Observable<Data> {
-        return Observable.create { observer in
-            guard let url = URL(string: self.music.preview) else {
-                observer.onError(ServerErrors.invalidRequest)
-                
-                return Disposables.create {}
-            }
+        return createDataObservable()
+    }
+}
 
-            let configuration = URLSession.shared.configuration
-            configuration.timeoutIntervalForRequest = 10
-
-            let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-                
-                if let data = data {
-                    observer.onNext(data)
-                    observer.onCompleted()
-                }
-                else if let error = error {
-                    observer.onError(error)
-                }
-                else {
-                    observer.onError(ServerErrors.connectionError)
-                }
-            })
-            
-            task.resume()
-            
-            return Disposables.create {
-                task.suspend()
-            }
-        }
+extension GetMusicDataInteractor: LoaderDataObservable {
+    func getUrl() -> String {
+        return self.music.preview
     }
 }
