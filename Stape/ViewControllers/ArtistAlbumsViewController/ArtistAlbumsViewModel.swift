@@ -46,7 +46,7 @@ class ArtistAlbumsViewModel {
     
     func getAlbums() {
         guard let viewController = viewController else { return }
-        let interactor = GetAlbumsInteractor(artistId: viewController.artist.id)
+        let interactor = GetAlbumsInteractor(artistId: viewController.artist.id, limit: 100)
         
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
         
