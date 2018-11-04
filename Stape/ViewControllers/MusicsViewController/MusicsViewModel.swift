@@ -62,7 +62,7 @@ class MusicsViewModel {
         disposable = interactor.execute()
             .subscribeOn(backgroundThread)
             .observeOn(MainScheduler.instance)
-            .map { musics in musics.map { music in TopMusicsCellItem(music: music, musics: musics) } }
+            .map { musics in musics.map { music in MusicsCellItem(music: music, musics: musics) } }
             .subscribe(onNext:     { self.items = $0 },
                        onError:    { error in self.verifyError(error) },
                        onDisposed: { self.disposable = nil })
@@ -80,7 +80,7 @@ class MusicsViewModel {
 
 extension MusicsViewModel: ModularViewModel {
     func registerCellItems() {
-        getTableView()?.register(cellController: TopMusicsCellItem.self)
+        getTableView()?.register(cellController: MusicsCellItem.self)
     }
     
     func getTableView() -> UITableView? {

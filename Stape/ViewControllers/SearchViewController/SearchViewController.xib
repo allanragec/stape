@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Stape" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="01R-hG-kSG" id="Thx-GE-OIc"/>
+                <outlet property="searchBar" destination="E2h-fq-ZR4" id="yaF-xR-NmE"/>
+                <outlet property="tableView" destination="9fx-By-Ui5" id="0om-q5-N0J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +21,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="E2h-fq-ZR4">
+                    <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9fx-By-Ui5">
+                    <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="01R-hG-kSG">
+                    <rect key="frame" x="177.5" y="361.5" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9fx-By-Ui5" firstAttribute="top" secondItem="E2h-fq-ZR4" secondAttribute="bottom" id="4hV-wp-F8P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9fx-By-Ui5" secondAttribute="bottom" id="H54-eO-fPN"/>
+                <constraint firstItem="9fx-By-Ui5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YC3-tX-Lp0"/>
+                <constraint firstItem="01R-hG-kSG" firstAttribute="centerX" secondItem="9fx-By-Ui5" secondAttribute="centerX" id="ZTv-6G-wzQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E2h-fq-ZR4" secondAttribute="trailing" id="ejE-u7-IpA"/>
+                <constraint firstItem="E2h-fq-ZR4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="epQ-Ab-ufm"/>
+                <constraint firstItem="E2h-fq-ZR4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mBG-Dk-YBg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9fx-By-Ui5" secondAttribute="trailing" id="p1b-eU-4eE"/>
+                <constraint firstItem="01R-hG-kSG" firstAttribute="centerY" secondItem="9fx-By-Ui5" secondAttribute="centerY" id="vqr-3o-7DS"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
         </view>
     </objects>
 </document>

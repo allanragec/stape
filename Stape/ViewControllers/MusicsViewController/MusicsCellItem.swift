@@ -6,7 +6,7 @@
 //  Copyright © 2018 Allan Melo. All rights reserved.
 //
 
-class TopMusicsCellItem: CellItemController {
+class MusicsCellItem: CellItemController {
     let music: Music
     let musics: [Music]
     

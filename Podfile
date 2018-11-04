@@ -9,6 +9,7 @@ target 'Stape' do
   
   pod 'RxSwift', '4.3.1'
   pod 'RxBlocking', '4.3.1'
+  pod 'RxCocoa', '4.3.1'
   pod 'NSObject+Rx', '4.4.1'
   pod 'SDWebImage', '4.4.2'
   pod 'UIImageColors', '2.0.1'

@@ -12,6 +12,7 @@ class SearchInteractor {
     let url: String
     
     init(query: String) {
+        print("query \(query)")
         self.url = "https://api.deezer.com/search?q=\(query)&limit=30"
     }
     
