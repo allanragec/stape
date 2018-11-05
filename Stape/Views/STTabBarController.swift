@@ -52,7 +52,7 @@ class STTabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBarAppearance.tintColor = UIColor(named: "tabBarIconColorSelected")
     }
     
-    private func createTabs() {
+    func createTabs() {
         tabBar.isHidden = false
         
         let homeNavigationController = createNavigationController(HomeViewController(), icon: "home")

@@ -10,6 +10,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBAction func openLogin(_ sender: Any) {
-        navigationController?.present(LoginViewController(), animated: true, completion: nil)
+        let loginViewController = LoginViewController()
+        
+        loginViewController.didLoginAction = {
+            STTabBarController.shared.createTabs()
+        }
+        
+        navigationController?.present(loginViewController, animated: true, completion: nil)
     }
 }

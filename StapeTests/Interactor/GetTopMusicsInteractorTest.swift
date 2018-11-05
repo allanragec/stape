@@ -6,7 +6,6 @@
 //  Copyright © 2018 Allan Melo. All rights reserved.
 //
 
-
 import XCTest
 import RxBlocking
 
