@@ -106,6 +106,9 @@
 		D2FDA053218F32D000769C8B /* LoaderDataFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA052218F32D000769C8B /* LoaderDataFromServer.swift */; };
 		D2FDA055218F342000769C8B /* SearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA054218F342000769C8B /* SearchInteractorTest.swift */; };
 		D2FDA057218F353D00769C8B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA056218F353D00769C8B /* SearchViewModel.swift */; };
+		D2FDA059218FE73500769C8B /* GetUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA058218FE73500769C8B /* GetUserInteractor.swift */; };
+		D2FDA05B218FE88A00769C8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA05A218FE88A00769C8B /* User.swift */; };
+		D2FDA05D218FE8CF00769C8B /* GetUserInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA05C218FE8CF00769C8B /* GetUserInteractorTest.swift */; };
 		EEAAE689626E8312A67CBCE3 /* Pods_StapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B348E3CC8EC1902FB3BB520A /* Pods_StapeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +261,9 @@
 		D2FDA052218F32D000769C8B /* LoaderDataFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDataFromServer.swift; sourceTree = "<group>"; };
 		D2FDA054218F342000769C8B /* SearchInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTest.swift; sourceTree = "<group>"; };
 		D2FDA056218F353D00769C8B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D2FDA058218FE73500769C8B /* GetUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractor.swift; sourceTree = "<group>"; };
+		D2FDA05A218FE88A00769C8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2FDA05C218FE8CF00769C8B /* GetUserInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractorTest.swift; sourceTree = "<group>"; };
 		DDEC4F21D8E6FF69BBBFA9A6 /* Pods-StapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StapeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StapeTests/Pods-StapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B1AA64B7D00D6100194E9B /* Pods-Stape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stape.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stape/Pods-Stape.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -420,6 +426,7 @@
 				D23E7B5E21898E9900A250D1 /* Artist.swift */,
 				D21008B9218AE65D00D7EF03 /* Music.swift */,
 				D21008BB218AE68E00D7EF03 /* MusicsCollection.swift */,
+				D2FDA05A218FE88A00769C8B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,6 +448,7 @@
 				D2FDA034218E438300769C8B /* GetAlbumTracksInteractorTest.swift */,
 				D2FDA036218E43E600769C8B /* GetTopMusicsInteractorTest.swift */,
 				D2FDA054218F342000769C8B /* SearchInteractorTest.swift */,
+				D2FDA05C218FE8CF00769C8B /* GetUserInteractorTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -570,6 +578,7 @@
 				D21008E8218CFA5A00D7EF03 /* GetMusicDataInteractor.swift */,
 				D2FDA031218E429900769C8B /* GetAlbumTracksInteractor.swift */,
 				D2FDA050218F2FB100769C8B /* SearchInteractor.swift */,
+				D2FDA058218FE73500769C8B /* GetUserInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -912,11 +921,13 @@
 				D23E7B482189823A00A250D1 /* GetAlbumsInteractor.swift in Sources */,
 				D2FDA04F218E58C000769C8B /* ArtistAlbumCellItem.swift in Sources */,
 				D2FDA046218E49F000769C8B /* AlbumMusicCellItem.swift in Sources */,
+				D2FDA05B218FE88A00769C8B /* User.swift in Sources */,
 				D21008B8218AE1C500D7EF03 /* GetTopMusicsInteractor.swift in Sources */,
 				D2FDA03B218E463A00769C8B /* AlbumMusicTableViewCell.swift in Sources */,
 				D21008BC218AE68E00D7EF03 /* MusicsCollection.swift in Sources */,
 				D2FDA04A218E55C000769C8B /* ArtistAlbumTableViewCell.swift in Sources */,
 				D21008C4218C8E7F00D7EF03 /* UITableView.swift in Sources */,
+				D2FDA059218FE73500769C8B /* GetUserInteractor.swift in Sources */,
 				D21008BF218AE6CB00D7EF03 /* ArtistDetailsTopMusicsTableViewCell.swift in Sources */,
 				D23E7B74218AAD4600A250D1 /* AlbumCollectionViewCell.swift in Sources */,
 				D23E7B68218A808D00A250D1 /* ArtistDetailsViewController.swift in Sources */,
@@ -935,6 +946,7 @@
 				D23E7B6121898F9700A250D1 /* GetFavoriteArtistsInteractorTest.swift in Sources */,
 				D2FDA037218E43E700769C8B /* GetTopMusicsInteractorTest.swift in Sources */,
 				D2FDA055218F342000769C8B /* SearchInteractorTest.swift in Sources */,
+				D2FDA05D218FE8CF00769C8B /* GetUserInteractorTest.swift in Sources */,
 				D23E7B5521898A2A00A250D1 /* GetAlbumsInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
