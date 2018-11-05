@@ -11,7 +11,7 @@ import RxSwift
 class GetUserInteractor {
     let url: String
     
-    init(userId: Int64) {
+    init(userId: String) {
         self.url = "https://api.deezer.com/user/\(userId)"
     }
     

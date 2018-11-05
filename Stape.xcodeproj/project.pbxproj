@@ -109,6 +109,7 @@
 		D2FDA059218FE73500769C8B /* GetUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA058218FE73500769C8B /* GetUserInteractor.swift */; };
 		D2FDA05B218FE88A00769C8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA05A218FE88A00769C8B /* User.swift */; };
 		D2FDA05D218FE8CF00769C8B /* GetUserInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA05C218FE8CF00769C8B /* GetUserInteractorTest.swift */; };
+		D2FDA05F218FEDCE00769C8B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FDA05E218FEDCE00769C8B /* ProfileViewModel.swift */; };
 		EEAAE689626E8312A67CBCE3 /* Pods_StapeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B348E3CC8EC1902FB3BB520A /* Pods_StapeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +265,7 @@
 		D2FDA058218FE73500769C8B /* GetUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractor.swift; sourceTree = "<group>"; };
 		D2FDA05A218FE88A00769C8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D2FDA05C218FE8CF00769C8B /* GetUserInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractorTest.swift; sourceTree = "<group>"; };
+		D2FDA05E218FEDCE00769C8B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DDEC4F21D8E6FF69BBBFA9A6 /* Pods-StapeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StapeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StapeTests/Pods-StapeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3B1AA64B7D00D6100194E9B /* Pods-Stape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stape.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stape/Pods-Stape.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -404,6 +406,7 @@
 			children = (
 				D23E7B4021895DD800A250D1 /* ProfileViewController.swift */,
 				D23E7B4121895DD800A250D1 /* ProfileViewController.xib */,
+				D2FDA05E218FEDCE00769C8B /* ProfileViewModel.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				D23E7B5721898C0700A250D1 /* AlbumCollection.swift in Sources */,
 				D21008D5218CE6EC00D7EF03 /* ModularViewController.swift in Sources */,
 				D21008E6218CF6B300D7EF03 /* ArtistAlbumsViewController.swift in Sources */,
+				D2FDA05F218FEDCE00769C8B /* ProfileViewModel.swift in Sources */,
 				D23E7B50218986E800A250D1 /* Codable.swift in Sources */,
 				D2B5B94B2188E00A00B81E1F /* STTabBarController.swift in Sources */,
 				D2206233218AC44300A5BC34 /* ArtistDetailsViewModel.swift in Sources */,

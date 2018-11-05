@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Stape" customModuleProvider="target">
             <connections>
+                <outlet property="nameLabel" destination="Fij-jZ-Sht" id="kpm-v5-Gzd"/>
+                <outlet property="portraitImageView" destination="XY3-4Y-3pr" id="WwI-6w-TxY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,15 +22,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-qW-8BG">
-                    <rect key="frame" x="150" y="81" width="75" height="30"/>
+                    <rect key="frame" x="157" y="318" width="75" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Open login"/>
                     <connections>
                         <action selector="openLogin:" destination="-1" eventType="touchUpInside" id="Gs8-19-4Zc"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-jZ-Sht">
+                    <rect key="frame" x="10" y="272" width="355" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="oRU-1X-bT7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-4Y-3pr">
+                    <rect key="frame" x="97.5" y="84" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="7ld-od-LIN"/>
+                        <constraint firstAttribute="width" constant="180" id="V3c-an-gWh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="90"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XY3-4Y-3pr" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Hzo-JO-GEf"/>
+                <constraint firstItem="XY3-4Y-3pr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Ifu-tQ-d4J"/>
+                <constraint firstItem="Fij-jZ-Sht" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-20" id="erH-v3-amd"/>
+                <constraint firstItem="Fij-jZ-Sht" firstAttribute="top" secondItem="XY3-4Y-3pr" secondAttribute="bottom" constant="8" id="hBj-wb-h1c"/>
+                <constraint firstItem="Fij-jZ-Sht" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="zDI-nG-f6d"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

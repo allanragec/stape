@@ -9,6 +9,21 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var portraitImageView: UIImageView!
+    
+    lazy var viewModel: ProfileViewModel = {
+        return ProfileViewModel(self)
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.viewDidLoad()
+        
+        navigationItem.title = "Profile"
+    }
+    
     @IBAction func openLogin(_ sender: Any) {
         let loginViewController = LoginViewController()
         
