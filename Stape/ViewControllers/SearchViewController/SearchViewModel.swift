@@ -67,7 +67,9 @@ class SearchViewModel {
             .disposed(by: viewController.rx.disposeBag)
     }
     
-    func refresh() {}
+    func refresh() {
+        viewController?.refreshControl.endRefreshing()
+    }
     
     private func updateData() {
         guard let viewController = viewController else { return }
