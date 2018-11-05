@@ -8,6 +8,8 @@
 
 import AVFoundation
 import RxSwift
+import SDWebImage
+import MediaPlayer
 
 class PlayerManager {
     
@@ -21,7 +23,9 @@ class PlayerManager {
     var player: AVAudioPlayer?
     var disposable: Disposable?
     
-    private init() {}
+    private init() {
+        setupRemoteTransportControls()
+    }
     
     func isPlaying() -> Bool {
         return player?.isPlaying ?? false
@@ -149,6 +153,7 @@ class PlayerManager {
         guard let player = player else { return Observable.empty() }
         
         player.play()
+        setupNowPlaying()
         let initialCurrenTime = Int(player.currentTime)
         let duration = Int(round(player.duration))
         
@@ -160,5 +165,67 @@ class PlayerManager {
             .timer(0, period: 1, scheduler: MainScheduler.instance)
             .take(from - to + 1)
             .map { (from - $0, to) }
+    }
+}
+
+extension PlayerManager {
+    //MARK: External Command Controlls
+    func setupRemoteTransportControls() {
+        let commandCenter = MPRemoteCommandCenter.shared()
+        
+        commandCenter.playCommand.addTarget { [unowned self] event in
+            self.playSound()
+            return .success
+        }
+        
+        commandCenter.pauseCommand.addTarget { [unowned self] event in
+            if self.player?.rate == 1.0 {
+                self.pauseMusic()
+                return .success
+            }
+            return .commandFailed
+        }
+        
+        commandCenter.nextTrackCommand.addTarget { [unowned self] event in
+            if let _ = self.getNextMusic() {
+                self.nextMusic()
+                return .success
+            }
+            
+            return .commandFailed
+        }
+        
+        commandCenter.previousTrackCommand.addTarget { [unowned self] event in
+            if let _ = self.getPreviousMusic() {
+                self.previousMusic()
+                return .success
+            }
+            
+            return .commandFailed
+        }
+    }
+    
+   //MARK: External Information
+    func setupNowPlaying() {
+        var nowPlayingInfo = [String : Any]()
+        nowPlayingInfo[MPMediaItemPropertyTitle] = currentMusic?.title
+        
+        if let currentMusic = currentMusic, let album = currentMusic.album {
+            let imageCached = SDImageCache.shared()
+            let image: UIImage? = imageCached.imageFromCache(forKey: album.coverBig) ??
+                imageCached.imageFromCache(forKey: album.coverMedium)
+            
+            if let image = image {
+                nowPlayingInfo[MPMediaItemPropertyArtwork] =
+                    MPMediaItemArtwork(boundsSize: image.size) { size in
+                        return image
+                }
+            }
+        }
+        
+        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = player?.currentTime
+        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = player?.duration
+        
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
 }
