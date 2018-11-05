@@ -59,21 +59,6 @@ class ArtistDetailsViewModel {
         items = [ArtistDetailHeaderCellItem(artist: artist),
                  ArtistDetailsTopMusicsCellItem(artist: artist),
                  AritstDetailsDiscographyCellItem(artist: artist)]
-        
-        return
-        
-//        let interactor = GetAlbumsInteractor(artistId: viewController.artist.id, index: 5)
-//        
-//        let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
-//        
-//        disposable = interactor.execute()
-//            .subscribeOn(backgroundThread)
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext:     { self.appendTotalAlbums(albums: $0) },
-//                       onError:    { error in self.verifyError(error) },
-//                       onDisposed: { self.disposable = nil })
-//        
-//        disposable?.disposed(by: viewController.rx.disposeBag)
     }
     
     private func appendTotalAlbums(albums: [Album]) {
