@@ -17,12 +17,6 @@ class HomeViewController: ModularViewController<HomeViewModel> {
         return HomeViewModel(self)
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = "Home"
-    }
-    
     override func getTableView() -> UITableView {
         return tableView
     }

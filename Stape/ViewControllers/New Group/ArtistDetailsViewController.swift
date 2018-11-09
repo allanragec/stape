@@ -29,12 +29,6 @@ class ArtistDetailsViewController: ModularViewController<ArtistDetailsViewModel>
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = artist.name
-    }
-    
     override func getTableView() -> UITableView {
         return tableView
     }

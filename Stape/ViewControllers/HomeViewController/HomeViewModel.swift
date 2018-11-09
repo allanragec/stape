@@ -33,6 +33,8 @@ class HomeViewModel {
         
         viewController.activityIndicator.startAnimating()
         getFavoriteArtists()
+        
+        viewController.navigationItem.title = "Home"
     }
     
     //MARK: Public methods

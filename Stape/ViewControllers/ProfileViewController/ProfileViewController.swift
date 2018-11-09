@@ -20,8 +20,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.viewDidLoad()
-        
-        navigationItem.title = "Profile"
     }
     
     @IBAction func openLogin(_ sender: Any) {

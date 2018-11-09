@@ -30,6 +30,7 @@ class MusicsViewModel {
         guard let viewController = viewController else { return }
         
         registerCellItems()
+        viewController.navigationItem.title = "\(viewController.artist.name) - Top Musics"
         
         viewController.activityIndicator.startAnimating()
         getFavoriteArtists()

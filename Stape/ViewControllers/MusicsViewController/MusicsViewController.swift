@@ -29,12 +29,6 @@ class MusicsViewController: ModularViewController<MusicsViewModel> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-         super.viewDidLoad()
-        
-        navigationItem.title = "\(artist.name) - Top Musics"
-    }
-    
     override func getTableView() -> UITableView {
         return tableView
     }

@@ -49,6 +49,8 @@ class ArtistDetailsViewModel {
 
         viewController.tableView.reloadData()
         viewController.refreshControl.endRefreshing()
+        
+        viewController.navigationItem.title = viewController.artist.name
     }
 
     private func getData() {

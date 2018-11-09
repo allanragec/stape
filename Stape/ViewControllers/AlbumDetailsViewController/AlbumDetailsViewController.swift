@@ -29,12 +29,6 @@ class AlbumDetailsViewController: ModularViewController<AlbumDetailsViewModel> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = album.title
-    }
-    
     override func getTableView() -> UITableView {
         return tableView
     }

@@ -24,6 +24,9 @@ class SearchViewModel {
     }
     
     func viewDidLoad() {
+        guard let viewController = viewController else { return }
+        
+        viewController.navigationItem.title = "Search"
         registerCellItems()
         
         searchSubscribe()

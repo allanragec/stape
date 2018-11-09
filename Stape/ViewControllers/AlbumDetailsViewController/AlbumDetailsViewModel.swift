@@ -33,6 +33,8 @@ class AlbumDetailsViewModel {
         
         viewController.activityIndicator.startAnimating()
         getTracks()
+        
+        viewController.navigationItem.title = viewController.album.title
     }
     
     //MARK: Public methods

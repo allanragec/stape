@@ -29,6 +29,7 @@ class ArtistAlbumsViewModel {
         guard let viewController = viewController else { return }
         
         registerCellItems()
+        viewController.navigationItem.title = viewController.artist.name
         
         viewController.activityIndicator.startAnimating()
         getAlbums()

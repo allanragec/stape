@@ -17,12 +17,6 @@ class SearchViewController: ModularViewController<SearchViewModel> {
         return SearchViewModel(self)
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.title = "Search"
-    }
-    
     override func getTableView() -> UITableView {
         return tableView
     }

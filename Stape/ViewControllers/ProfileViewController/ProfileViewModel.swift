@@ -21,6 +21,7 @@ class ProfileViewModel {
     func viewDidLoad() {
         guard let viewController = viewController else { return }
         
+        viewController.navigationItem.title = "Profile"
         let backgroundThread = ConcurrentDispatchQueueScheduler(qos: .background)
         
         GetUserInteractor(userId: Settings.userId ?? "")
